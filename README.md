@@ -27,10 +27,7 @@ pip install -e .
 
 ### Description of the code:
   
-I will use multiple class objects for kassemble. For now, one class object will be to import fastq files with extracted unqiue k-mers.\
-Another class object will be used to combine fastq files that contain unqiue k-mers to create denovo contigs of genetic variants.\
-Another class object will be for producing plots and maps of location of contigs present in the genome.\
-More class objects will be added as the project progresses...
+I will use multiple class objects for kassemble. For now, one class object will be to import fastq files with extracted unqiue k-mers. Another class object will be used to combine fastq files that contain unqiue k-mers to create denovo contigs of genetic variants. Another class object will be for producing plots and maps of location of contigs present in the genome. More class objects will be added as the project progresses...
 
 Packages that will be used follow: 
 
