@@ -1,4 +1,4 @@
-# Project: Kmerkit / Kassembly module 
+# Project: Kmerkit _ kassembly module 
 
 An outline of a new project idea (for now)
 
@@ -49,4 +49,53 @@ Example: user could call the program from the CLI and it will open either report
 ```
 # example command line interface
 my_weather_program --city "New York" --state NY --mean-temp --date-range 1900 2021
+```
+
+```python
+import kmerkit  
+
+# DATA
+FASTQS = "/tmp/*.fastq.gz"
+PHENOS = "/tmp/phenos.csv"
+
+# get dict mapping {sample_names: [fastq_files]}
+fastq_dict = kmerkit.get_fastq_dict_from_path(
+    fastq_path=FASTQS, 
+    name_split="_R",
+)
+
+# count kmers
+kmerkit.Kcount(
+    name='test', 
+    workdir='/tmp', 
+    fastq_dict=fastqdict,
+    kmersize=31,
+).run()
+
+# find kmers unique to one group versus another
+kmerkit.Kfilter(
+    name='test', 
+    workdir='/tmp', 
+    phenos=PHENOS,
+    trait='trait',
+    mincov=0.25,               # must be present in 25% overall
+    mincanon=0.25,             # must exist in both forms in 25% of samples where present.
+    minmap={1: 0.5, 0: 0.0},   # must be present 50% in group 1
+    maxmap={1: 1.0, 0: 0.0},   # must be absent in group 0
+).run()
+
+# get fastq reads filtered to only those matching target kmers
+kmerkit.Kextract(
+    name='test',
+    workdir='/tmp',
+    fastq_dict=fastq_dict,
+    group_kmers="/tmp/kgroup_test",
+).run()  
+
+# get matrix of (nsamples x nkmers) as geno data, from Kfiltered kmers.
+kmerkit.Kmatrix(
+    name="test",
+    workdir="/tmp",
+    ...
+)
 ```
