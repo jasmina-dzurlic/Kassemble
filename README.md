@@ -22,9 +22,9 @@ pip install -e .
 `kcount`: count unique k-mer reads present in a genome.\
 `kextract`: extract reads from fastq files that contain target kmers.\
 `kfilter`: filter unique k-mer reads based on statisical presences.\
-`kgroup`: group unique k-mer reads with associated phenotypes.\ 
+`kgroup`: group unique k-mer reads with associated phenotypes.\
 `kassemble`: assemble extracted k-mers into contigs to map the location in a genome.\
-`kmatrix`: use gemma to create a kinship matrix of unique k-mers.\ 
+`kmatrix`: use gemma to create a kinship matrix of unique k-mers.\
 `kgwas`: run plink with genotype and phenotype data to detect GWAS.\
 `klearn`: visualize sample/group genotype data (toyplot, scikit-learn etc.).\
 
