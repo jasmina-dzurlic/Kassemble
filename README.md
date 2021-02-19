@@ -34,12 +34,14 @@ More class objects will be added as the project progresses...
 
 Packages that will be used follow: 
 
-`subproccess`:
-`pandas`: to organize and analyze data.  
-`toyplot`: to generate line plots.  
-`loguru`: ...
-`kmc`: ...
-`numpy`: ...
+`subproccess`: to run new applications or programs through Python code by creating new processes.\
+`pandas`: to organize and analyze data.\
+`toyplot`: to generate line plots.\
+`loguru`: to bring enjoyable logging in Python.\
+`kmc`: to count k-mers.\
+`numpy`: to work with arrays and matrices to analyze data.\
+`gemma`: to perform Genome-wide Efficient Mixed Model Association.\
+`SPAdes`: to assemble denovo contigs. 
 
 ### Description of the data:
 I will access data programatically from a public online database using a REST API framework. 
