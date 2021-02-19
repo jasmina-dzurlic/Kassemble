@@ -6,6 +6,19 @@ An outline of a new project idea (for now)
 ### Description of project goal:
 My program will provide both a API and CLI interface for detecting genome wides associations (GWAS) with a k-mer based anaylsis. For the class project, I will build the `kassemble` module that will assemble unique k-mers into contigs in order to map the location of genetic variants detected.  
 
+Kmerkit is a general toolkit for performing reference-free genome-wide association analyses from kmers. It uses KMC to count and filter kmers, and has options to perform associations using gemma. The preferred way to run analyses in kmerkit is to use the API interactively in a jupyter notebook. This allows access to statistics, plotting summaries, and encourages users to create reproducible documentation of their workflow.
+
+#### Installation with conda (coming soon)
+```bash
+# conda install kmerkit -c conda-forge -c bioconda
+
+# for now, do dev installation with pip
+git clone https://github.com/eaton-lab/kmerkit
+cd kmerkit
+pip install -e .
+```
+
+
 ### Kmer kit
 `kcount`: ...
 `kextract`: ...
