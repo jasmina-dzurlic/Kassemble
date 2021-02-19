@@ -1,8 +1,5 @@
 # Project: Kmerkit _ kassembly module 
 
-An outline of a new project idea (for now)
-
-
 ### Description of project goal:
 My program will assemble reference-free genome wides associations (GWAS) with a k-mer based approach. For the class project, I will build the `kassemble` module that will assemble unique k-mers into contigs in order to map the location of genetic variants detected.  
 
@@ -26,11 +23,10 @@ pip install -e .
 `kassemble`: assemble extracted k-mers into contigs to map the location in a genome.\
 `kmatrix`: use gemma to create a kinship matrix of unique k-mers.\
 `kgwas`: run plink with genotype and phenotype data to detect GWAS.\
-`klearn`: visualize sample/group genotype data (toyplot, scikit-learn etc.).\
+`klearn`: visualize sample/group genotype data (toyplot, scikit-learn etc.).
 
 ### Description of the code:
-
-(It's fine to say you are not sure yet...)  
+  
 I will one class object for extracting data from online, and another class object for analyzing the data and producing plots.
 list any packages you can find online which you may use:  
 
