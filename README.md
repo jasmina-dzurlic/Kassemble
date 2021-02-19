@@ -1,21 +1,9 @@
 # Project: Kassemble 
 
 ### Description of project goal:
-My program will assemble reference-free genome wides associations (GWAS) with a k-mer based approach.\
-For the class project, I will build the `kassemble` module that will assemble unique k-mers into denovo contigs in order to map the location of genetic variants detected.  
+My program will assemble reference-free genome wide associations (GWAS) with a k-mer based approach. For the class project, I will build the `kassemble` module that will assemble unique k-mers into denovo contigs in order to map the location of genetic variants detected.  
 
-Kmerkit is a general toolkit for performing reference-free genome-wide association analyses from kmers. 
-
-
-#### Installation with conda (coming soon)
-```bash
-# conda install kmerkit -c conda-forge -c bioconda
-
-# for now, do dev installation with pip
-git clone https://github.com/eaton-lab/kmerkit
-cd kmerkit
-pip install -e .
-```
+Kmerkit is a general toolkit for performing reference-free genome-wide association analyses from kmers. `kassemble` will be a module part of the package that uses other modules in the package to create an assembly of a denovo contig. 
 
 ### Kmer kit
 `kcount`: count unique k-mer reads present in a genome.\
@@ -26,6 +14,16 @@ pip install -e .
 `kmatrix`: use gemma to create a kinship matrix of unique k-mers.\
 `kgwas`: run plink with genotype and phenotype data to detect GWAS.\
 `klearn`: visualize sample/group genotype data (toyplot, scikit-learn etc.).
+
+#### Installation with conda (coming soon)
+```bash
+# conda install kmerkit -c conda-forge -c bioconda
+
+# for now, do dev installation with pip
+git clone https://github.com/eaton-lab/kmerkit
+cd kmerkit
+pip install -e .
+```
 
 ### Description of the code:
   
