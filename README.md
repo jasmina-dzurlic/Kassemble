@@ -1,9 +1,11 @@
 # Project: Kassemble 
 
 ### Description of project goal:
-My program will assemble reference-free genome wides associations (GWAS) with a k-mer based approach. For the class project, I will build the `kassemble` module that will assemble unique k-mers into denovo contigs in order to map the location of genetic variants detected.  
+My program will assemble reference-free genome wides associations (GWAS) with a k-mer based approach.\
+For the class project, I will build the `kassemble` module that will assemble unique k-mers into denovo contigs in order to map the location of genetic variants detected.  
 
-Kmerkit is a general toolkit for performing reference-free genome-wide association analyses from kmers. It uses KMC to count and filter kmers, and has options to perform associations using gemma. The preferred way to run analyses in kmerkit is to use the API interactively in a jupyter notebook. This allows access to statistics, plotting summaries, and encourages users to create reproducible documentation of their workflow.
+Kmerkit is a general toolkit for performing reference-free genome-wide association analyses from kmers. 
+
 
 #### Installation with conda (coming soon)
 ```bash
@@ -44,14 +46,10 @@ Packages that will be used follow:
 `SPAdes`: to assemble denovo contigs. 
 
 ### Description of the data:
-I will access data programatically from a public online database using a REST API framework. 
+Kassembly will use genomic data in a .fastq format and phenotype data in a .CSV format. 
 
 ### Description of user interaction:
-Example: user could call the program from the CLI and it will open either report the results as text to the terminal, or if the user requests a plot, it will open the default browser and display.
-```
-# example command line interface
-my_weather_program --city "New York" --state NY --mean-temp --date-range 1900 2021
-```
+The preferred way to run analyses in kmerkit is to use the API interactively in a jupyter notebook. This allows access to statistics, plotting summaries, and encourages users to create reproducible documentation of their workflow.
 
 ```python
 import kmerkit  
