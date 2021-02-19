@@ -27,8 +27,12 @@ pip install -e .
 
 ### Description of the code:
   
-I will one class object for extracting data from online, and another class object for analyzing the data and producing plots.
-list any packages you can find online which you may use:  
+I will use multiple class objects for kassemble. For now, one class object will be to import fastq files with extracted unqiue k-mers.\
+Another class object will be used to combine fastq files that contain unqiue k-mers to create denovo contigs of genetic variants.\
+Another class object will be for producing plots and maps of location of contigs present in the genome.\
+More class objects will be added as the project progresses...
+
+Packages that will be used follow: 
 
 `subproccess`:
 `pandas`: to organize and analyze data.  
