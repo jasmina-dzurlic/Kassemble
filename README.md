@@ -1,7 +1,7 @@
 # Project: Kassemble 
 
 ### Description of project goal:
-My program will assemble reference-free genome wides associations (GWAS) with a k-mer based approach. For the class project, I will build the `kassemble` module that will assemble unique k-mers into contigs in order to map the location of genetic variants detected.  
+My program will assemble reference-free genome wides associations (GWAS) with a k-mer based approach. For the class project, I will build the `kassemble` module that will assemble unique k-mers into denovo contigs in order to map the location of genetic variants detected.  
 
 Kmerkit is a general toolkit for performing reference-free genome-wide association analyses from kmers. It uses KMC to count and filter kmers, and has options to perform associations using gemma. The preferred way to run analyses in kmerkit is to use the API interactively in a jupyter notebook. This allows access to statistics, plotting summaries, and encourages users to create reproducible documentation of their workflow.
 
@@ -20,7 +20,7 @@ pip install -e .
 `kextract`: extract reads from fastq files that contain target kmers.\
 `kfilter`: filter unique k-mer reads based on statisical presences.\
 `kgroup`: group unique k-mer reads with associated phenotypes.\
-`kassemble`: assemble extracted k-mers into contigs to map the location in a genome.\
+`kassemble`: assemble extracted k-mers into denovo contigs to map the location in a genome.\
 `kmatrix`: use gemma to create a kinship matrix of unique k-mers.\
 `kgwas`: run plink with genotype and phenotype data to detect GWAS.\
 `klearn`: visualize sample/group genotype data (toyplot, scikit-learn etc.).
