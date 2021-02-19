@@ -21,7 +21,7 @@ My program will provide both a API and CLI interface for detecting genome wides 
 I will one class object for extracting data from online, and another class object for analyzing the data and producing plots.
 list any packages you can find online which you may use:  
 
-`subproccess`
+`subproccess`:
 `pandas`: to organize and analyze data.  
 `toyplot`: to generate line plots.  
 `loguru`: ...
