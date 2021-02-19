@@ -41,7 +41,7 @@ Packages that will be used follow:
 `SPAdes`: to assemble denovo contigs. 
 
 ### Description of the data:
-Kassembly will use genomic data in a .fastq format and phenotype data in a .csv format. 
+`kassemble` will use genomic data in a .fastq format and phenotype data in a .csv format. 
 
 ### Description of user interaction:
 The preferred way to run analyses in kmerkit is to use the API interactively in a jupyter notebook. This allows access to statistics, plotting summaries, and encourages users to create reproducible documentation of their workflow.
