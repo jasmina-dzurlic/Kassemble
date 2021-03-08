@@ -30,7 +30,7 @@ kmerkit kfilter --name test --workdir /tmp --mincov A 0.0 B 1.0 --maxcov A 0.0 B
 kmerkit kextract --name test --workdir /tmp --samples A A.fastq.gz 
 ```
 
-Then `kassembly` will be added to the previous pipeline to assebmle the unique k-mers into denovo conitgs. 
+Then `kassembly` will incorporate the data produced from the previous pipeline in order to assemble reads into denovo conitgs. 
 
 ```bash
 # assemble kmers into contigs
