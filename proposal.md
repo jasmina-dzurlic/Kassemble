@@ -3,12 +3,12 @@
 ### Utility of proposal
 `kassemble` is a Python package with the objective to assemble denovo contigs with a reference-free, k-mer based approach.
 
-<img src="contig.png" width="700">
+<img src="contig.png" width="500">
 
 ### Data sources and input
 Genomic data contained in a .fastq format is the input data for `kassemble`. 
 
-<img src="FASTQ.png" width="600">
+<img src="FASTQ.png" width="400">
 
 
 ### User interaction and output
