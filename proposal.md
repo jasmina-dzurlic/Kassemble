@@ -14,7 +14,8 @@ Genomic data in a .fastq format is the input data for `kassemble`.
 
 <img src="FASTQ.png" width="600">
 
-The preanalysis of the data that is used to import into `kassemble` will be produced by `kmerkit`. `kmerkit` counts kmers using `kcount`, filters unique kmers using `kfilter`, then extracts unqiue k-mers using `kextract`.
+The preanalysis of the data that is used to import into `kassemble` will be produced by `kmerkit`. The documentation for kmerkit can be found
+[here](https://github.com/eaton-lab/kmerkit.git). `kmerkit` counts kmers using `kcount`, filters unique kmers using `kfilter`, then extracts unqiue k-mers using `kextract`.
 
 ```bash
 # write kmer databases for two samples to /tmp/test
