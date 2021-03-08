@@ -1,11 +1,7 @@
 # Kassemble 
-
-`kassemble` is a Python package with the objective to assemble fastq reads into denovo contigs to map the location of genes in a genome. 
-
+  
 ### Utility of proposal
-`kassemble` will assemble reference-free genome wide associations (GWAS) using a k-mer based approach. 
-
-
+`kassemble` is a Python package with the objective to assemble denovo contigs with a reference-free, k-mer based approach.
 
 <img src="contig.png" width="700">
 
