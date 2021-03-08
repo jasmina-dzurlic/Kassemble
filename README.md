@@ -4,10 +4,19 @@
 <img src="contig.png" width="500">
 
 ### In development 
- 
-```bash
-# conda install kassembly -c conda-forge -c bioconda
+The list of dependencies required by `kassemble` are:
+`SPAdes`
+`pandas`
+`subprocess`
+`numpy`
+`kmerkit`
 
+The following command in `conda`installs these packages if they are not previously  installed. 
+conda install SPAdes pandas subprocess numpy kmerkit -c conda-forge
+
+As `kassemble`is in development, it can currently be installed locally using the following command to clone this repository to your local machine:
+
+```bash
 git clone https://github.com/jasmina-dzurlic/Kassemble.git
 cd kassemble
 pip install -e .
