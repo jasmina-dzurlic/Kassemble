@@ -14,6 +14,8 @@ Genomic data in a .fastq format is the input data for `kassemble`.
 
 <img src="FASTQ.png" width="600">
 
+
+### User interaction and output
 The preanalysis of the data that is used to import into `kassemble` will be produced by `kmerkit`. The documentation for kmerkit can be found
 [here](https://github.com/eaton-lab/kmerkit.git). `kmerkit` counts kmers using `kcount`, filters unique kmers using `kfilter`, then extracts unqiue k-mers using `kextract`.
 
@@ -35,7 +37,6 @@ Then `kassembly` will be added to the previous pipeline to assebmle the unique k
 kassemble --name assembled --workdir /tmp-assembled/ --sample B B.fastq.gz 
 ```
 
-### User interaction and output 
 `kassemble`is designed for use as a CLI and stores the following output files in <output_dir> , which is set by the user:
 
 <output_dir>/contigs.fasta contains resulting contigs <br />
