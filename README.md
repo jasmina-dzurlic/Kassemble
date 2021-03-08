@@ -12,7 +12,9 @@ The list of dependencies required by `kassemble` are: <br />
 `kmerkit` <br />
 
 The following command in `conda`installs these packages if they are not previously installed: <br /> 
+```bash
 conda install SPAdes pandas subprocess numpy kmerkit -c conda-forge
+``` 
 
 As `kassemble` undergoes development, it can currently be installed locally using the following command to clone this repository to your local machine:
 
