@@ -1,7 +1,7 @@
 # Kassemble 
   
 ### Utility of proposal
-`kassemble` is a Python package with the objective to assemble denovo contigs using a reference-free, k-mer based approach. The purpose of `kassemble` is to offer a flexible approach to entering sample namesand the fastq data files associated with them. This makes it easy to accommodate single or paired-end data files, to combine technical replicates from different sequencing runs, or even to create pooled samples. Thus, `kassemble` is intended to be easy to install, execute, and well documented. `kassemble` uses the `SPAdes` [software tool](https://github.com/ablab/spades) to create contigs of unique k-mers extracted from reads in a fastq file. As a wrapper around `SPades`, `kassembly` is intended to make it easier and added as an addition to the `kmerkit` [tool kit](https://github.com/eaton-lab/kmerkit.git). 
+`kassemble` is a Python package with the objective to assemble denovo contigs using a reference-free, k-mer based approach. The purpose of `kassemble` is to offer a flexible approach to entering sample names and their respective fastq data files. This makes it easy to accommodate single or paired-end data files, to combine technical replicates from different sequencing runs, or even to incorporate pooled samples. Thus, `kassemble` is intended to be easy to install, execute, and well documented. `kassemble` uses the `SPAdes` [software tool](https://github.com/ablab/spades) to create contigs of unique k-mers extracted from reads in a fastq file. As a wrapper around `SPades`, `kassembly` is intended to make it easier and added as an addition to the `kmerkit` [tool kit](https://github.com/eaton-lab/kmerkit.git)pipeline. 
 
 <img src="contig.png" width="500">
 
@@ -54,6 +54,5 @@ pip install -e .
 ``` 
 
 ### Related tools
-`SPAdes` is a related tool that is incorporated in `Kassemble` as a python wrapper to perform de novo contig assemblies. 
-
-`SOAPdenovo2` is also a contig assembly tool that performs similar assemblies and more information about this program can be found [here](https://github.com/aquaskyline/SOAPdenovo2). The shortcomings of `SOAPdenovo2` is that it is designed for short read assemblies and small genomes compared to `SPAdes` in which utilizes long-reads in a short-read assembly. In additon, `SPAdes`incorporates long reads to scaffold contigs from a short-read assembly. 
+`SOAPdenovo2` is a contig assembly [tool](https://github.com/aquaskyline/SOAPdenovo2) that performs similar assemblies of contigs. The shortcomings of `SOAPdenovo2` is that it is designed for short read assemblies and small genomes compared to `SPAdes` in which utilizes long-reads in a short-read assembly. In additon, `SPAdes`incorporates long reads to scaffold contigs from a short-read assembly. Beacuse of this, I believe `SPAdes` is better to incoporate into `kassemble` rather than `SOAPdenovo2`. `kassemble` is different from `SPAdes`and `SOAPdenovo2` in terms of its' user friendly approach and that it is intended to be an addition to a more robust pipeline, `kmerkit`, in which performs evolutionary analyses using 
+kmer counts, frequencies, and comparisons with or without the context of a reference genome.
