@@ -30,7 +30,7 @@ kmerkit kfilter --name test --workdir /tmp --mincov A 0.0 B 1.0 --maxcov A 0.0 B
 kmerkit kextract --name test --workdir /tmp --samples A A.fastq.gz 
 ```
 
-Then `kassembly` will incorporate the data produced from the previous pipeline in order to assemble reads into denovo conitgs. 
+Then `kassemble` will incorporate the data produced from the previous pipeline in order to assemble reads into denovo conitgs. 
 
 ```bash
 # assemble kmers into contigs
@@ -54,9 +54,9 @@ Figure 1. E. coli contig assembly graph created using SPAdes.
 # conda install kassembly -c conda-forge -c bioconda
 
 git clone https://github.com/jasmina-dzurlic/Kassemble.git
-cd kassembly
+cd kassemble
 pip install -e .
 ``` 
 
 ### Related tools
-`SPAdes` is a related tool that will be incorporated as in `Kassembly` with a python wrapper to perform de novo contig assemblies. The [documentation](https://github.com/ablab/spades) for `SPAdes` provides more detailed information about the program. `SOAPdenovo2` is also a contig assembly tool that performs similar assemblies and more information about this program can be found [here](https://github.com/aquaskyline/SOAPdenovo2). The shortcomings of `SOAPdenovo2` is that it is designed for short read assemblies and small genomes compared to `SPAdes` in which utilizes long-reads in a short-read assembly. In additon, `SPAdes`incorporates long reads to scaffold contigs from a short-read assembly. 
+`SPAdes` is a related tool that is incorporated in `Kassemble` as a python wrapper to perform de novo contig assemblies. The [documentation](https://github.com/ablab/spades) for `SPAdes` provides more detailed information about the program. `SOAPdenovo2` is also a contig assembly tool that performs similar assemblies and more information about this program can be found [here](https://github.com/aquaskyline/SOAPdenovo2). The shortcomings of `SOAPdenovo2` is that it is designed for short read assemblies and small genomes compared to `SPAdes` in which utilizes long-reads in a short-read assembly. In additon, `SPAdes`incorporates long reads to scaffold contigs from a short-read assembly. 
