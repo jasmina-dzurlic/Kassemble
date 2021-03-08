@@ -8,7 +8,7 @@
 ### Data sources and input
 Genomic data contained in a .fastq format is the input data for `kassemble`. 
 
-<img src="FASTQ.png" width="400">
+<img src="FASTQ.png" width="500">
 
 
 ### User interaction and output
