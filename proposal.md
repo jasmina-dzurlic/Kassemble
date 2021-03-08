@@ -38,7 +38,7 @@ Kassemble stores the following output files in <output_dir> , which is set by th
 
 [add description sentence]
 
-![](SPAdes_ecoli_graph.png)
+![](SPAdes_ecoli_graph.png){ width=50% }
 
 
 ### Installation 
