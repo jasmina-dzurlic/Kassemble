@@ -10,7 +10,7 @@
 <img src="contig.png" width="700">
 
 ### Data sources and input
-Genomic data in a .fastq format is the input data for `kassemble`. 
+Genomic data contained in a .fastq format is the input data for `kassemble`. 
 
 <img src="FASTQ.png" width="600">
 
