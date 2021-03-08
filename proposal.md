@@ -50,7 +50,7 @@ Kassemble stores the following output files in <output_dir> , which is set by th
 ```bash
 # conda install kassembly -c conda-forge -c bioconda
 
-git clone https://github.com/eaton-lab/kmerkit
+git clone https://github.com/jasmina-dzurlic/Kassemble.git
 cd kassembly
 pip install -e .
 ``` 
