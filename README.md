@@ -1,4 +1,15 @@
 # Kassemble 
 
-### Description of project goal:
-My program will assemble reference-free genome wide associations
+Add descriptive sentence... 
+
+### Utility of proposal
+My program...
+
+### Data sources and input
+My program...
+
+### User interaction and output 
+My program...
+
+### Related tools
+My program...
