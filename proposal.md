@@ -12,8 +12,7 @@ Genomic data contained in a .fastq format is the input data for `kassemble`.
 
 
 ### User interaction and output
-The preanalysis of the data that is imported into `kassemble` is produced by `kmerkit`. The documentation for kmerkit can be found
-[here](https://github.com/eaton-lab/kmerkit.git). `kmerkit` counts kmers using `kcount`, filters unique kmers using `kfilter`, then extracts unqiue k-mers using `kextract`.
+The preanalysis of the data that is imported into `kassemble` is produced by `kmerkit`. `kmerkit` counts kmers using `kcount`, filters unique kmers using `kfilter`, then extracts unqiue k-mers using `kextract`.
 
 ```bash
 # write kmer databases for two samples to /tmp/test
@@ -55,4 +54,6 @@ pip install -e .
 ``` 
 
 ### Related tools
-`SPAdes` is a related tool that is incorporated in `Kassemble` as a python wrapper to perform de novo contig assemblies. The [documentation](https://github.com/ablab/spades) for `SPAdes` provides more detailed information about the program. `SOAPdenovo2` is also a contig assembly tool that performs similar assemblies and more information about this program can be found [here](https://github.com/aquaskyline/SOAPdenovo2). The shortcomings of `SOAPdenovo2` is that it is designed for short read assemblies and small genomes compared to `SPAdes` in which utilizes long-reads in a short-read assembly. In additon, `SPAdes`incorporates long reads to scaffold contigs from a short-read assembly. 
+`SPAdes` is a related tool that is incorporated in `Kassemble` as a python wrapper to perform de novo contig assemblies. 
+
+`SOAPdenovo2` is also a contig assembly tool that performs similar assemblies and more information about this program can be found [here](https://github.com/aquaskyline/SOAPdenovo2). The shortcomings of `SOAPdenovo2` is that it is designed for short read assemblies and small genomes compared to `SPAdes` in which utilizes long-reads in a short-read assembly. In additon, `SPAdes`incorporates long reads to scaffold contigs from a short-read assembly. 
