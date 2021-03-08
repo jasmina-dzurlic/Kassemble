@@ -1,19 +1,38 @@
 # Kassemble 
 
-### Description of project goal:
-My program will assemble reference-free genome wide associations (GWAS) with a k-mer based approach. For the class project, I will build the `kassemble` module that will assemble unique k-mers into denovo contigs in order to map the location of genetic variants detected.  
+`kassemble`: assemble extracted k-mers into denovo contigs to map the location in a genome.\ 
 
-Kmerkit is a general toolkit for performing reference-free genome-wide association analyses from kmers. `kassemble` will be a module part of the package that uses other modules in the package to create an assembly of a denovo contig. 
+### Utility of proposal
+My program will assemble reference-free genome wide associations (GWAS) with a k-mer based approach. For the class project, I will build the `kassemble` module that will assemble unique k-mers into denovo contigs in order to map the location of genetic variants detected. 
 
-### Kmer kit
-`kcount`: count unique k-mer reads present in a genome.\
-`kextract`: extract reads from fastq files that contain target kmers.\
-`kfilter`: filter unique k-mer reads based on statisical presences.\
-`kgroup`: group unique k-mer reads with associated phenotypes.\
-`kassemble`: assemble extracted k-mers into denovo contigs to map the location in a genome.\
-`kmatrix`: use gemma to create a kinship matrix of unique k-mers.\
-`kgwas`: run plink with genotype and phenotype data to detect GWAS.\
-`klearn`: visualize sample/group genotype data (toyplot, scikit-learn etc.).
+### Data sources and input
+My program...
+
+### User interaction and output 
+My program...
+
+### Related tools
+My program...
+
+
+#### The pre-analysis with kmerkit
+```bash
+# write kmer databases for two samples to /tmp/test
+kmerkit kcount --name test --workdir /tmp --sample A A.fastq.gz --sample B B.fastq.gz
+
+# filter kmers to find those unique to B (not in A)
+kmerkit kfilter --name test --workdir /tmp --mincov A 0.0 B 1.0 --maxcov A 0.0 B 1.0
+
+# extract fastq reads that contain these kmers from sample B
+# *** this produces the filtered fastq files as output that you will want to use as input to your program 
+kmerkit kextract --name test --workdir /tmp --samples A A.fastq.gz 
+```
+### Analysis with your CLI tool developed for this project
+```bash
+# your program will take fastq files as input, or in the syntax here `--sample name fastqfile`
+kassemble --name assembled --workdir /tmp-assembled/ --sample A A.fastq.gz
+```
+
 
 #### Installation with conda (coming soon)
 ```bash
