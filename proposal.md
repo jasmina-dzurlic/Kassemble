@@ -32,7 +32,7 @@ Then `kassemble` will incorporate the data produced from the previous pipeline i
 kassemble --name assembled --workdir /tmp-assembled/ --sample B B.fastq.gz 
 ```
 
-`kassemble`is designed for use as a CLI and stores the following output files in <output_dir> , which is set by the user:
+`kassemble` is designed for use as a CLI and stores the following output files in <output_dir> , which is set by the user:
 
 <output_dir>/contigs.fastq contains resulting contigs <br />
 <output_dir>/assembly_graph.gfa contains assembly graph of contigs
