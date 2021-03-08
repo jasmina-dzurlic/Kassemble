@@ -44,6 +44,7 @@ Kassemble stores the following output files in <output_dir> , which is set by th
 
 
 <img src="SPAdes_ecoli_graph.png" width="400">
+Figure 1. E. coli contig assembly graph created using SPAdes. 
 
 
 ### Installation 
