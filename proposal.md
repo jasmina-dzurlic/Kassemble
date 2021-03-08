@@ -1,7 +1,7 @@
 # Kassemble 
   
 ### Utility of proposal
-`kassemble` is a Python package with the objective to assemble denovo contigs with a reference-free, k-mer based approach. The program is intended to be easy to install, easy to use, and well documented. `kassemble` offers a flexible approach to entering sample namesand the fastq data files associated with them. This makes it easy to accommodate single or paired-end data files, to combine technical replicates from different sequencing runs, or even to create pooled samples. `kassemble` uses the `SPAdes`[software tool](https://github.com/ablab/spades) to create contigs unique k-mers extracted from reads in a fastq file. As a wrapper around `SPades`, `kassembly` is intended to make it easier and aligned with the `kmerkit`[tool](https://github.com/eaton-lab/kmerkit.git). 
+`kassemble` is a Python package with the objective to assemble denovo contigs with a reference-free, k-mer based approach. The program is intended to be easy to install, easy to use, and well documented. `kassemble` offers a flexible approach to entering sample namesand the fastq data files associated with them. This makes it easy to accommodate single or paired-end data files, to combine technical replicates from different sequencing runs, or even to create pooled samples. `kassemble` uses the `SPAdes`[software tool](https://github.com/ablab/spades) to create contigs unique k-mers extracted from reads in a fastq file. As a wrapper around `SPades`, `kassembly` is intended to make it easier and aligned with the `kmerkit` [tool kit](https://github.com/eaton-lab/kmerkit.git). 
 
 <img src="contig.png" width="500">
 
