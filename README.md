@@ -4,3 +4,11 @@
 <img src="contig.png" width="500">
 
 ### In development 
+ 
+```bash
+# conda install kassembly -c conda-forge -c bioconda
+
+git clone https://github.com/jasmina-dzurlic/Kassemble.git
+cd kassemble
+pip install -e .
+``` 
