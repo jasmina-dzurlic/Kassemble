@@ -1,4 +1,4 @@
-# Project: Kassemble 
+# Kassemble 
 
 ### Description of project goal:
 My program will assemble reference-free genome wide associations (GWAS) with a k-mer based approach. For the class project, I will build the `kassemble` module that will assemble unique k-mers into denovo contigs in order to map the location of genetic variants detected.  
