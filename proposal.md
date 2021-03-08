@@ -1,17 +1,14 @@
 # Kassemble 
 
-`kassemble`: assemble extracted k-mers into denovo contigs to map the location in a genome.\ 
+`kassemble` assembles extracted k-mers into denovo contigs to map the location in a genome.\ 
 
 ### Utility of proposal
 My program will assemble reference-free genome wide associations (GWAS) with a k-mer based approach. For the class project, I will build the `kassemble` module that will assemble unique k-mers into denovo contigs in order to map the location of genetic variants detected. 
 
 ### Data sources and input
-My program...
+`kassemble` will use genomic data in a .fastq format and phenotype data in a .csv format.
 
 ### User interaction and output 
-My program...
-
-### Related tools
 My program...
 
 
@@ -58,9 +55,7 @@ Packages that will be used follow:
 `numpy`: to work with arrays and matrices to analyze data.\
 `gemma`: to perform Genome-wide Efficient Mixed Model Association.\
 `SPAdes`: to assemble denovo contigs. 
-
-### Description of the data:
-`kassemble` will use genomic data in a .fastq format and phenotype data in a .csv format. 
+ 
 
 ### Description of user interaction:
 The preferred way to run analyses in kmerkit is to use the API interactively in a jupyter notebook. This allows access to statistics, plotting summaries, and encourages users to create reproducible documentation of their workflow.
@@ -88,3 +83,7 @@ kmerkit.Kassemble(
 ).run()
 
 ```
+
+### Related tools
+My program...
+
