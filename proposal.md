@@ -34,28 +34,6 @@ kmerkit kextract --name test --workdir /tmp --samples A A.fastq.gz
 
 [add description sentence]
 
-```python
-import kassembly  
-
-# DATA
-FASTQS = "/tmp/*.fastq.gz"
-
-# get dict mapping {sample_names: [fastq_files]}
-fastq_dict = kassembly.get_fastq_dict_from_path(
-    fastq_path=FASTQS, 
-    name_split="_R",
-)
-
-# assemble kmers
-Kassemble(
-    name='test', 
-    workdir='/tmp', 
-    fastq_dict=fastqdict,
-    kmersize=31,
-    assemble_kmers="/tmp/kassemble_test",
-).run()
-
-```
 
 ### Installation 
 ```bash
