@@ -14,13 +14,7 @@ Genomic data in a .fastq format is the input data for `kassemble`.
 
 <img src="FASTQ.png" width="600">
 
-```bash
-# Kassembly will take fastq files as input, or in the syntax here `--sample name fastqfile`
-kassemble --name assembled --workdir /tmp-assembled/ --sample A A.fastq.gz
-```
-
-### User interaction and output 
-CLI interaction....
+The preanalysis of the data that is used to import into `kassemble` will be produced by `kmerkit`. `kmerkit` counts kmers using `kcount`, filters unique kmers using `kfilter`, then extracts unqiue k-mers using `kextract`.
 
 ```bash
 # write kmer databases for two samples to /tmp/test
@@ -31,10 +25,17 @@ kmerkit kfilter --name test --workdir /tmp --mincov A 0.0 B 1.0 --maxcov A 0.0 B
 
 # extract fastq reads that contain these kmers from sample B
 kmerkit kextract --name test --workdir /tmp --samples A A.fastq.gz 
-
-# assemble fastq reads of extracted kmers from sample B
-kmerkit kassemble --name test --workdir /tmp --samples B B.fastq.gz --kmer.size 
 ```
+
+Then `kassembly` will be added to the previous pipeline to assebmle the unique k-mers into denovo conitgs. 
+
+```bash
+# assemble kmers into contigs
+kassemble --name assembled --workdir /tmp-assembled/ --sample B B.fastq.gz 
+```
+
+### User interaction and output 
+
 Kassemble stores the following output files in <output_dir> , which is set by the user:
 
 <output_dir>/contigs.fasta contains resulting contigs <br />
