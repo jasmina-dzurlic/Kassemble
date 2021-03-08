@@ -33,9 +33,8 @@ kmerkit kextract --name test --workdir /tmp --samples A A.fastq.gz
 ```
 Kassemble stores the following output files in <output_dir> , which is set by the user:
 
-<output_dir>/scaffolds.fasta contains resulting scaffolds <br />
 <output_dir>/contigs.fasta contains resulting contigs <br />
-<output_dir>/assembly_graph.gfa contains assembly graph of scaffolds and contigs
+<output_dir>/assembly_graph.gfa contains assembly graph of contigs
 
 [add description sentence]
 
