@@ -39,10 +39,10 @@ kassemble --name assembled --workdir /tmp-assembled/ --sample B B.fastq.gz
 
 `kassemble`is designed for use as a CLI and stores the following output files in <output_dir> , which is set by the user:
 
-<output_dir>/contigs.fasta contains resulting contigs <br />
+<output_dir>/contigs.fastq contains resulting contigs <br />
 <output_dir>/assembly_graph.gfa contains assembly graph of contigs
 
-[add description sentence]
+For example, below is an example of `contigs.fastq` as a `assembly_graph.gfa` for E. coli produced by SPAdes.  
 
 
 <img src="SPAdes_ecoli_graph.png" width="400">
