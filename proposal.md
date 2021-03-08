@@ -10,6 +10,8 @@
 ### Data sources and input
 Genomic data in a .fastq format is the input data for `kassemble`. 
 
+![](FASTQ.png)
+
 ```bash
 # Kassembly will take fastq files as input, or in the syntax here `--sample name fastqfile`
 kassemble --name assembled --workdir /tmp-assembled/ --sample A A.fastq.gz
