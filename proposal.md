@@ -5,12 +5,12 @@
 ### Utility of proposal
 `kassemble` will assemble reference-free genome wide associations (GWAS) with a k-mer based approach. For the class project, I will build the `kassemble` module that will assemble unique k-mers into denovo contigs in order to map the location of genetic variants detected. 
 
-![](contig.png)
+<img src="contig.png" width="400">
 
 ### Data sources and input
 Genomic data in a .fastq format is the input data for `kassemble`. 
 
-![](FASTQ.png)
+<img src="FASTQ.png" width="400">
 
 ```bash
 # Kassembly will take fastq files as input, or in the syntax here `--sample name fastqfile`
