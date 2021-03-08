@@ -1,9 +1,11 @@
 # Kassemble 
 
-`kassemble` assembles extracted k-mers into denovo contigs to map the location in a genome. 
+`kassemble` assembles fastq reads into denovo contigs to map the location of genes in a genome. 
 
 ### Utility of proposal
-`kassemble` will assemble reference-free genome wide associations (GWAS) with a k-mer based approach. For the class project, I will build the `kassemble` module that will assemble unique k-mers into denovo contigs in order to map the location of genetic variants detected. 
+`kassemble` will assemble reference-free genome wide associations (GWAS) with a k-mer based approach. 
+
+
 
 <img src="contig.png" width="700">
 
@@ -28,8 +30,10 @@ kmerkit kcount --name test --workdir /tmp --sample A A.fastq.gz --sample B B.fas
 kmerkit kfilter --name test --workdir /tmp --mincov A 0.0 B 1.0 --maxcov A 0.0 B 1.0
 
 # extract fastq reads that contain these kmers from sample B
-# *** this produces the filtered fastq files as output that you will want to use as input to your program 
 kmerkit kextract --name test --workdir /tmp --samples A A.fastq.gz 
+
+# assemble fastq reads of extracted kmers from sample B
+kmerkit kassemble --name test --workdir /tmp --samples B B.fastq.gz --kmer.size 
 ```
 Kassemble stores the following output files in <output_dir> , which is set by the user:
 
@@ -44,11 +48,10 @@ Kassemble stores the following output files in <output_dir> , which is set by th
 
 ### Installation 
 ```bash
-# conda install kmerkit -c conda-forge -c bioconda
+# conda install kassembly -c conda-forge -c bioconda
 
-# for now, do dev installation with pip
 git clone https://github.com/eaton-lab/kmerkit
-cd kmerkit
+cd kassembly
 pip install -e .
 ``` 
 
