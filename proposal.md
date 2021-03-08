@@ -1,8 +1,7 @@
 # Kassemble 
   
 ### Utility of proposal
-`kassemble` is a Python package with the objective to assemble denovo contigs using a reference-free, k-mer based approach. The purpose of `kassemble` is to offer a flexible approach to entering sample names and their respective fastq data files. This makes it easy to accommodate single or paired-end data files, to combine technical replicates from different sequencing runs, or even to incorporate pooled samples. Thus, `kassemble` is intended to be easy to install, execute, and well documented. `kassemble` uses the `SPAdes` [software tool](https://github.com/ablab/spades) to create contigs of unique k-mers extracted from reads in a fastq file. As a wrapper around `SPades`, `kassembly` is intended to make it easier and added as an addition to the `kmerkit` [tool kit](https://github.com/eaton-lab/kmerkit.git) pipeline. 
-
+`kassemble` is a Python package with the objective to assemble denovo contigs using a reference-free, k-mer based approach. The purpose of `kassemble` is to offer a flexible approach to entering sample names and their respective fastq data files. This makes it easy to accommodate single or paired-end data files, to combine technical replicates from different sequencing runs, or even to incorporate pooled samples. Thus, `kassemble` is intended to be easy to install, execute, and well documented. `kassemble` incorporates the `SPAdes` [software tool](https://github.com/ablab/spades) as a Python wrapper to create contigs of unique k-mers extracted from reads in a fastq file.  
 <img src="contig.png" width="500">
 
 ### Data sources and input
@@ -12,7 +11,7 @@ Genomic data contained in a .fastq format is the input data for `kassemble`.
 
 
 ### User interaction and output
-The preanalysis of the data that is imported into `kassemble` is produced by `kmerkit`. `kmerkit` counts kmers using `kcount`, filters unique kmers using `kfilter`, then extracts unqiue k-mers using `kextract`.
+The preanalysis of the data that is imported into `kassemble` is produced by `kmerkit`. As a wrapper around `SPades`, `kassembly` is intended to make it easier and added as an addition to the `kmerkit` [tool kit](https://github.com/eaton-lab/kmerkit.git) pipeline. `kmerkit` counts kmers using `kcount`, filters unique kmers using `kfilter`, then extracts unqiue k-mers using `kextract`.
 
 ```bash
 # write kmer databases for two samples to /tmp/test
@@ -25,7 +24,7 @@ kmerkit kfilter --name test --workdir /tmp --mincov A 0.0 B 1.0 --maxcov A 0.0 B
 kmerkit kextract --name test --workdir /tmp --samples A A.fastq.gz 
 ```
 
-Then `kassemble` will incorporate the data produced from the previous pipeline in order to assemble reads into denovo conitgs. 
+Then `kassemble` incorporates the data produced from the previous pipeline to assemble k-mers into denovo conitgs. 
 
 ```bash
 # assemble kmers into contigs
