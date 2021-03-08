@@ -6,13 +6,12 @@
 My program will assemble reference-free genome wide associations (GWAS) with a k-mer based approach. For the class project, I will build the `kassemble` module that will assemble unique k-mers into denovo contigs in order to map the location of genetic variants detected. 
 
 ### Data sources and input
-`kassemble` will use genomic data in a .fastq format and phenotype data in a .csv format.
+`kassemble` will use genomic data in a .fastq format and phenotype data in a .csv format. 
+
 
 ### User interaction and output 
 My program...
 
-
-#### The pre-analysis with kmerkit
 ```bash
 # write kmer databases for two samples to /tmp/test
 kmerkit kcount --name test --workdir /tmp --sample A A.fastq.gz --sample B B.fastq.gz
@@ -24,14 +23,13 @@ kmerkit kfilter --name test --workdir /tmp --mincov A 0.0 B 1.0 --maxcov A 0.0 B
 # *** this produces the filtered fastq files as output that you will want to use as input to your program 
 kmerkit kextract --name test --workdir /tmp --samples A A.fastq.gz 
 ```
-### Analysis with your CLI tool developed for this project
+### CLI
 ```bash
 # your program will take fastq files as input, or in the syntax here `--sample name fastqfile`
 kassemble --name assembled --workdir /tmp-assembled/ --sample A A.fastq.gz
 ```
 
-
-#### Installation with conda (coming soon)
+### Installation 
 ```bash
 # conda install kmerkit -c conda-forge -c bioconda
 
@@ -39,23 +37,7 @@ kassemble --name assembled --workdir /tmp-assembled/ --sample A A.fastq.gz
 git clone https://github.com/eaton-lab/kmerkit
 cd kmerkit
 pip install -e .
-```
-
-### Description of the code:
-  
-I will use multiple class objects for kassemble. For now, one class object will be to import fastq files with extracted unqiue k-mers. Another class object will be used to combine fastq files that contain unqiue k-mers to create denovo contigs of genetic variants. Another class object will be for producing plots and maps of location of contigs present in the genome. More class objects will be added as the project progresses...
-
-Packages that will be used follow: 
-
-`subproccess`: to run new applications or programs through Python code by creating new processes.\
-`pandas`: to organize and analyze data.\
-`toyplot`: to generate line plots.\
-`loguru`: to bring enjoyable logging in Python.\
-`kmc`: to count k-mers.\
-`numpy`: to work with arrays and matrices to analyze data.\
-`gemma`: to perform Genome-wide Efficient Mixed Model Association.\
-`SPAdes`: to assemble denovo contigs. 
- 
+``` 
 
 ### Description of user interaction:
 The preferred way to run analyses in kmerkit is to use the API interactively in a jupyter notebook. This allows access to statistics, plotting summaries, and encourages users to create reproducible documentation of their workflow.
@@ -87,3 +69,12 @@ kmerkit.Kassemble(
 ### Related tools
 My program...
 
+Packages that will be used follow: 
+`subproccess`: to run new applications or programs through Python code by creating new processes.\
+`pandas`: to organize and analyze data.\
+`toyplot`: to generate line plots.\
+`loguru`: to bring enjoyable logging in Python.\
+`kmc`: to count k-mers.\
+`numpy`: to work with arrays and matrices to analyze data.\
+`gemma`: to perform Genome-wide Efficient Mixed Model Association.\
+`SPAdes`: to assemble denovo contigs. 
