@@ -35,9 +35,13 @@ class Kassemble:
     workdir (str):
         Working directory where new filtered fastq files will be written.
         Examples: '/tmp' or '/tmp/newfastqs'.
-    kmerfile:
+    kmerfile (str):
         File with fastq of reads with unique kmers. 
-
+    kmersize (str):
+        Size of kmers
+    outputdir (str):
+        Directory where outputs are stored. 
+        
     """
     
     def __init__(
@@ -62,8 +66,8 @@ class Kassemble:
 
     def assemble_contig(self):
         """
-        Expand file paths and check that they exist. Also,
-        TODO: check sample names and do not allow strange characters.
+        Assemble contigs using SPAdes by executing subproccess. 
+        TODO: check input data options for SPAdes and how to set -1 to be more than one option.
         """
         
 
