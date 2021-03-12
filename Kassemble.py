@@ -39,6 +39,7 @@ class Kassemble:
         File with fastq of reads with unique kmers. 
     kmersize (str):
         Size of kmers
+        SPAdes default: -k 21,33,55,77,99,127
     outputdir (str):
         Directory where outputs are stored. 
         
