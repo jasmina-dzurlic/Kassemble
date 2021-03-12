@@ -94,13 +94,11 @@ class Kassemble:
 
 if __name__ == "__main__":
 
-    # test dataset w/ R1 and R2 files
-    # FILES = "~/Documents/ipyrad/isolation/reftest_fastqs/[1-2]*_0_R*_.fastq.gz"
+    # test dataset
     FILES = "~/Documents/kmerkit/data/amaranths/hybridus_*.fastq.gz"
     FASTQ_DICT = get_fastq_dict_from_path(FILES, "_R")
 
     import kassemble
-
     
     # example
     
