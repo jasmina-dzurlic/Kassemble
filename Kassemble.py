@@ -69,6 +69,7 @@ class Kassemble:
         """
         Assemble contigs using SPAdes by executing subproccess. 
         TODO: check input data options for SPAdes and how to set -1 to be more than one option.
+        
         """
      
         # create command: 'spades -k 21,33,55,77,99,127 <your reads> -o spades_output'
