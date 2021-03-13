@@ -89,6 +89,8 @@ class Kassemble:
             stdout=subprocess.PIPE,
             check=True,
             cwd=self.workdir,
+            #I think that you need to capture the output or you'll just have a subproccess class object
+            capture_output=True
         )
 
 
