@@ -58,7 +58,7 @@ class Kassemble:
         self.name = name
         self.workdir = os.path.realpath(os.path.expanduser(workdir))
         self.kmerfile = kmerfile
-        self.kmersize = kmer size
+        self.kmersize = kmersize
         self.outputdir = output directory
        
     # output file prefix
@@ -74,11 +74,11 @@ class Kassemble:
      
         # create command: 'spades -k 21,33,55,77,99,127 <your reads> -o spades_output'
         cmd = [
-            SPAdes,
+            "spades", #changed this line
             "-o{}".format(self.output),
             "-1{}".format(self.kmerfile),
             "-k{}".format(self.kmersize),
-            self.workdir,
+            self.workdir, #what does this do? Since it's not in the command above you're trying to create
         ]
 
         # call subprocess on the command
@@ -90,6 +90,12 @@ class Kassemble:
             check=True,
             cwd=self.workdir,
         )
+
+    def some_graph_tool(self):
+        """
+        Creates assembly graph
+        """
+        pass
 
 
 if __name__ == "__main__":
