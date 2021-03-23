@@ -16,13 +16,13 @@ The preanalysis of the data that is imported into `kassemble` is produced by `km
 
 ```bash
 # write kmer databases for two samples to /tmp/test
-kmerkit kcount --name test --workdir /tmp --sample A A.fastq.gz --sample B B.fastq.gz
+kmerkit kcount --name test --workdir /tmp --sample ecoli_1K_1.fq.gz --sample ecoli_1K_2.fq.gz
 
 # filter kmers to find those unique to B (not in A)
-kmerkit kfilter --name test --workdir /tmp --mincov A 0.0 B 1.0 --maxcov A 0.0 B 1.0
+kmerkit kfilter --name test --workdir /tmp --mincov ecoli_1K_1.fq.gz 0.0 B 1.0 --maxcov ecoli_1K_2.fq.gz 0.0 B 1.0
 
 # extract fastq reads that contain these kmers from sample B
-kmerkit kextract --name test --workdir /tmp --samples A A.fastq.gz 
+kmerkit kextract --name test --workdir /tmp --samples ecoli_1K_1.fq.gz 
 ```
 
 Then `kassemble` incorporates the data produced from the previous pipeline to assemble k-mers into denovo conitgs. 
@@ -37,7 +37,7 @@ kassemble --name assembled --workdir /tmp-assembled/ --sample B B.fastq.gz
 <output_dir>/contigs.fastq contains resulting contigs <br />
 <output_dir>/assembly_graph.gfa contains assembly graph of contigs
 
-For example, below is an example of `contigs.fastq` as a `assembly_graph.gfa` for E. coli produced by SPAdes.  
+For example, below is an example of `contigs.fastq` as a `assembly_graph.gfa` for E. coli produced by SPAdes of SOAPdenovo2.  
 
 
 <img src="SPAdes_ecoli_graph.png" width="400">
