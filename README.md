@@ -54,7 +54,7 @@ kmerkit kextract --name test --workdir /tmp --samples A ecoli_1K_1.fq.gz
 ```
 
 
-##### Assemble k-mers
+##### Assemble k-mers 
 
 ```bash
 # assemble kmers into contigs
