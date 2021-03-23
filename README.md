@@ -24,5 +24,45 @@ pip install -e .
 
 ### Working example
 
+In this working example we will use fastq files of sequence data for Escherichia coli found in the data folder of this repository. 
+
 ##### Install package
+
+```bash
+conda install SPAdes SOAPdenovo2 subprocess kmerkit -c conda-forge
+``` 
+
+##### Count k-mers
+
+```bash
+# write kmer databases for two samples to /tmp/test
+kmerkit kcount --name test --workdir /tmp --sample A ecoli_1K_1.fq.gz --sample B ecoli_1K_2.fq.gz
+```
+
+##### Filter k-mers
+
+```bash
+# filter kmers to find those unique to B (not in A)
+kmerkit kfilter --name test --workdir /tmp --mincov A 0.0 B 1.0 --maxcov A 0.0 B 1.0
+```
+
+##### Extract k-mers
+
+```
+# extract fastq reads that contain these kmers from sample B
+kmerkit kextract --name test --workdir /tmp --samples A ecoli_1K_1.fq.gz 
+```
+
+
+##### Assemble k-mers
+
+```bash
+# assemble kmers into contigs
+kassemble --name assembled --workdir /tmp-assembled/ --sample ecoli_1K_1.fq.gz 
+```
+
+`kassemble` is designed for use as a CLI and stores the following output files in <output_dir> , which is set by the user:
+
+<output_dir>/contigs.fastq contains resulting contigs <br />
+<output_dir>/assembly_graph.gfa contains assembly graph of contigs
 
