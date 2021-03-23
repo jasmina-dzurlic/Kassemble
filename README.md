@@ -11,7 +11,7 @@ The list of dependencies required by `kassemble` are: <br />
 
 The following command in `conda`installs these packages if they are not previously installed: <br /> 
 ```bash
-conda install SPAdes pandas subprocess numpy kmerkit -c conda-forge
+conda install SPAdes SOAPdenovo2 subprocess kmerkit -c conda-forge
 ``` 
 
 As `kassemble` undergoes development, it can currently be installed locally using the following command to clone this repository to your local machine:
@@ -22,5 +22,7 @@ cd kassemble
 pip install -e .
 ``` 
 
-### Working example:
+### Working example
+
+#### Install package
 
