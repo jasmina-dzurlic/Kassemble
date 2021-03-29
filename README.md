@@ -1,6 +1,7 @@
 # Kassemble 
 `kassemble` is a Python package with the objective to assemble denovo contigs using a reference-free, k-mer based approach. `kassemble` incorporates the `SPAdes` [software tool](https://github.com/ablab/spades) and/or `SOAPdenovo2` [tool](https://github.com/aquaskyline/SOAPdenovo2) as a Python wrapper to create contigs of unique k-mers extracted from reads in a fastq file. The purpose of `kassemble` is to offer a flexible approach to entering sample names and their respective fastq data files. This makes it easy to accommodate single or paired-end data files, to combine technical replicates from different sequencing runs, or even to incorporate pooled samples. Thus, `kassemble` is intended to be easy to install, execute, and well documented. 
 
+
 ![alt tag](https://raw.githubusercontent.com/jasmina-dzurlic/Kassemble/main/example/contig.png)
 
 
@@ -66,5 +67,10 @@ kassemble --name assembled --workdir /tmp-assembled/ --sample ecoli_1K_1.fq.gz
 `kassemble` is designed for use as a CLI and stores the following output files in <output_dir> , which is set by the user:
 
 <output_dir>/contigs.fastq contains resulting contigs <br />
+
+![alt tag](https://raw.githubusercontent.com/jasmina-dzurlic/Kassemble/main/example/FASTQ.png)
+
 <output_dir>/assembly_graph.gfa contains assembly graph of contigs
+
+![alt tag](https://raw.githubusercontent.com/jasmina-dzurlic/Kassemble/main/example/SPAdes_ecoli_graph.png)
 
