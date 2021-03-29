@@ -9,7 +9,7 @@ The list of dependencies required by `kassemble` are: <br />
 `subprocess` <br />
 `kmerkit` <br />
 
-The following command in `conda`installs these packages if they are not previously installed: <br /> 
+The following command in `conda` installs these packages if they are not previously installed: <br /> 
 ```bash
 conda install SPAdes SOAPdenovo2 subprocess kmerkit -c conda-forge
 ``` 
@@ -24,7 +24,7 @@ pip install -e .
 
 ### Working example
 
-In this working example we will use fastq files of sequence data for Escherichia coli found in the data folder of this repository. 
+In this working example we will use `fasta files` of sequence data for Escherichia coli found in the data folder of this repository. 
 
 ##### Install package
 
@@ -34,7 +34,7 @@ conda install SPAdes SOAPdenovo2 subprocess kmerkit -c conda-forge
 
 ##### Input data
 
-The input for this program is a .fasta file containing genome seqeunces.  
+The input for this program is a `.fasta` file containing genome seqeunces.  
 
 ![alt tag](https://raw.githubusercontent.com/jasmina-dzurlic/Kassemble/main/example/contig.png)
 
