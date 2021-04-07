@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """
 Assembles unique kmers in fastq data files using SPAdes to create
-denovo contigs. 
+denovo contigs
 
 Kcount -> Kfilter -> Kextract -> KASSEMBLE
 
