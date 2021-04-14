@@ -44,7 +44,7 @@ if __name__ == "__main__":
     # test data set
     R1_FILE = "../data/ecoli_1K_1.fq.gz"
     R2_FILE = "../data/ecoli_1K_2.fq.gz"
-    OUTDIR = "/tmp/ecoli-test"
+    OUTDIR = "../ecoli-test"
 
     # test function, if it does not raise an error then it works
     call_spades(R1_FILE, R2_FILE, OUTDIR)
