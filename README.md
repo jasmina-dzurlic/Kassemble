@@ -8,6 +8,7 @@ The list of dependencies required by `kassemble` are: <br />
 `kmerkit` <br />
 `subprocess` <br />
 `kmerkit` <br />
+`spades` vr 3.12.0  <br />
 
 The following command in `conda` installs these packages if they are not previously installed: <br /> 
 ```bash
