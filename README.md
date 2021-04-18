@@ -88,7 +88,7 @@ To create a refined assembly using multi-species contig coverage, `Kassemble` us
 
 ```bash
 # create multi-species contig assembly graph
-kassemble --graph ../data/assembly_graph.fastg --paths ../data/contigs.paths --outdir ../tmp --assemble spades
+kassemble assembly_graph --graph ../data/assembly_graph.fastg --paths ../data/contigs.paths --outdir ../tmp --assemble spades
 ```
 
 ![alt tag](https://github.com/jasmina-dzurlic/Kassemble/blob/main/example/Graphbin2.png)
