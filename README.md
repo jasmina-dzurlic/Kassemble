@@ -24,37 +24,37 @@ cd kassemble
 pip install -e .
 ``` 
 
-## Working example
+### Working example
 
 In this working example we will use `fasta files` of sequence data for Escherichia coli found in the data folder of this repository. 
 
-## Install package
+#### Install package
 
 ```bash
 conda install SPAdes SOAPdenovo2 GraphBin2 subprocess kmerkit -c conda-forge
 ``` 
 
-## Input data
+#### Input data
 
 The input for this program is a `.fasta` file containing genome seqeunces.  
 
 ![alt tag](https://raw.githubusercontent.com/jasmina-dzurlic/Kassemble/main/example/contig.png)
 
-## Count k-mers
+#### Count k-mers
 
 ```bash
 # write kmer databases for two samples to /tmp/test
 kmerkit kcount --name test --workdir /tmp --sample A ecoli_1K_1.fq.gz --sample B ecoli_1K_2.fq.gz
 ```
 
-## Filter k-mers
+#### Filter k-mers
 
 ```bash
 # filter kmers to find those unique to B (not in A)
 kmerkit kfilter --name test --workdir /tmp --sample A ecoli_1K_1.fq.gz --sample B ecoli_1K_2.fq.gz --mincov A 0.0 B 1.0 --maxcov A 0.0 B 1.0
 ```
 
-## Extract k-mers
+#### Extract k-mers
 
 ```
 # extract fastq reads that contain these kmers from sample B
@@ -62,7 +62,7 @@ kmerkit kextract --name test --workdir /tmp --sample A ecoli_1K_1.fq.gz --sample
 ```
 
 
-## Assemble k-mers 
+#### Assemble k-mers 
 
 ```bash
 # assemble kmers into contigs
@@ -80,8 +80,7 @@ kassemble --name test --workdir /tmp --sample A ecoli_1K_1.fq.gz --sample B ecol
 ![alt tag](https://raw.githubusercontent.com/jasmina-dzurlic/Kassemble/main/example/SPAdes_ecoli_graph.png)
 
 
-
-## Create refined assembly graph
+#### Create refined assembly graph
 
 To create a refined assembly using multi-species contig coverage, `Kassemble` uses `GraphBin2` [tool](https://github.com/Vini2/GraphBin2) in which incorporates connectivity and coverage information from assembly graphs to adjust existing binning results on contigs and to infer contigs shared by multiple species. This type of multiple species coverage is ideal for GWAS and `Kmerkit` based analysis. 
 
