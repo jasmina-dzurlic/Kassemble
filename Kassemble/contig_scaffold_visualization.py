@@ -1,55 +1,51 @@
+
 #!/usr/bin/env python
 
 """
-
-Visualization of genomic data: k-mers, contigs, assemblies. 
-
-"""
-#!/usr/bin/env python
-
+Visualization of contigs and scaffolds output data from simple_spades.py. 
 """
 
-Visualization of output data from simple_spades.py. 
-
-"""
-
-import toytree
+import toyplot
 
     
 def graph_contigs(contigs.fasta)
+ 
+ """
+ Graphs contigs assembled by simple_spades.py
+ """
     
-  data = 
+  data = (contigs.fasta)
 
     canvas, axes, mark = toyplot.plot(
       data,
       width = 500,
       height=500,
-      );
+      color='orange',
+ );
+       
         
+def graph_contigs(scaffolds.fasta)
+
+ """
+ Graphs scaffolds assembled by simple_spades.py
+ """
     
-def graph_scaffolds(scaffolds.fasta)
-    
-  data = 
+  data = (scaffolds.fasta)
 
     canvas, axes, mark = toyplot.plot(
       data,
       width = 500,
       height=500,
-      );
-        
-        
+      color='orange',
+ );    
 
- if __name__ == "__main__":
-
-    # test data set
-    R1_FILE = "../data/ecoli_1K_1.fq.gz"
-    R2_FILE = "../data/ecoli_1K_2.fq.gz"
-    OUTDIR = "/tmp/ecoli-test"
+ 
+if __name__ == "__main__":
 
     # test function, if it does not raise an error then it works
-    call_soapdenovo2 (R1_FILE, R2_FILE, OUTDIR)
+    graph_contigs (contigs.fasta)
+    graph_scaffolds(scaffolds.fasta)
 
     # print contents of OUTDIR to show results
-    import os
-    print("results files:")
-    print(os.listdir(OUTDIR))
+    print("contigs.graph" "scaffolds.graph")
+
