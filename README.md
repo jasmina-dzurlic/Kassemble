@@ -11,6 +11,7 @@ The list of dependencies required by `kassemble` are: <br />
 `subprocess` <br />
 `kmerkit` <br />
 `GraphBin2` <br />
+`kat` <br />
 `spades` vr 3.12.0  <br />
 
 The following command in `conda` installs these packages if they are not previously installed: <br /> 
@@ -33,7 +34,7 @@ In this working example we will use `fasta files` of sequence data for Escherich
 #### Install package
 
 ```bash
-conda install SPAdes SOAPdenovo2 GraphBin2 subprocess kmerkit -c conda-forge
+conda install SPAdes SOAPdenovo2 GraphBin2 kat subprocess kmerkit -c conda-forge
 ``` 
 
 #### Input data
