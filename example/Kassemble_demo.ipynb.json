@@ -1,0 +1,170 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "b03da1f1",
+   "metadata": {},
+   "source": [
+    "## Assembly of K-mers with Kassembly and Kmerkit"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "709252da",
+   "metadata": {},
+   "source": [
+    "### Kmerkit"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2ddba6f6",
+   "metadata": {},
+   "source": [
+    "Kmerkit is a general toolkit for performing reference-free genome-wide association analyses using kmers. The preferred way to run analyses in Kmerkit is to use it as an Application Programming Interface (API)  interactively in a jupyter notebook. This allows access to statistics, plotting summaries, and encourages users to create reproducible documentation of their workflow."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "8364da2e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import kmerkit"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e00a23bf",
+   "metadata": {},
+   "source": [
+    "The program is currently contains six modules: Kcount, Kfilter, Kextract, Kassemble, and Kgwas. Each module can be used independently or consecutively in a pipeline. For example, the first step of a gwas pipeline using K-merkit is executing the 'Kcount' module which uses the Python package subprocess to call the program KMC to count k-mers in fastq/fasta files. Once unique k-mers are counted, the output files are loaded into the following module, Kfilter and Kextrat to filter unique k-mers that are then assembled into contigs and scaffols using Kassemble."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6b338386",
+   "metadata": {},
+   "source": [
+    "### Kassemble"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6756a1d0",
+   "metadata": {},
+   "source": [
+    "Kassemble is an independent module applied to Kmerkit. Kassemble is a Python package that performs denovo assemblies of contigs and scaffolds using a reference-free, k-mer based approach. Kassemble incorporates the SPAdes and/or SOAPdenovo2 as a Python wrapper to create contigs of unique k-mers extracted from reads in a fastq file. SPAdes, St. Petersburg genome assembler, is an assembly toolkit containing various assembly pipelines and SOAPdenovo is a novel short-read assembler. Kassemble builds on these programs by offering visualization of k-mer statistics and assembly. "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "12cd34ad",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import kassemble"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "bc16999b",
+   "metadata": {},
+   "source": [
+    "When applied to the Kmerkit pipeline, first use K-count to count k-mers then Kfilter to filter unique k-mers to then be extracted with Kextract. K-mers from Kextract are input into Kassembly as a fast.q file assembled into contigs and scaffolds, then De Bruijn assembly graphs. "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a2db6f3f",
+   "metadata": {},
+   "source": [
+    "### Pipeline for contigs and scaffolds using E.coli test data "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "9c2a7a5c",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# import packages \n",
+    "\n",
+    "import kmerkit\n",
+    "import kassemble "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "7c0b817a",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Count k-mers using Kcount \n",
+    "\n",
+    "kmerkit kcount --name test --workdir /tmp --sample A ecoli_1K_1.fq.gz --sample B ecoli_1K_2.fq.gz"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "cbc43de7",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Filter k-mers using Kfilter\n",
+    "\n",
+    "kmerkit kfilter --name test --workdir /tmp --mincov A 0.0 B 1.0 --maxcov A 0.0 B 1.0"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "b2097bc0",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Extract k-mers using Kextract\n",
+    "\n",
+    "kmerkit kextract --name test --workdir /tmp --samples A ecoli_1K_1.fq.gz "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "9acd5c55",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Assemble k-mers using Kassemble\n",
+    "\n",
+    "kassemble --name tes --workdir /tmp-assembled/ --sample ecoli_1K_1.fq.gz "
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.8.5"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
