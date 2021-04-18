@@ -7,6 +7,9 @@ Visualization of contigs and scaffolds output data from simple_spades.py.
 
 import toyplot
 
+ """
+ Graphs contigs assembled by simple_spades.py
+ """
     
 def graph_contigs(contigs.fasta)
  
