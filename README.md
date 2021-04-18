@@ -68,7 +68,7 @@ kmerkit kextract --name test --workdir /tmp --sample A ecoli_1K_1.fq.gz --sample
 
 ```bash
 # assemble kmers into contigs
-kassemble --name test --workdir /tmp --sample A ecoli_1K_1.fq.gz --sample B ecoli_1K_2.fq.gz
+kassemble simple_spades --name test --workdir /tmp --sample A ecoli_1K_1.fq.gz --sample B ecoli_1K_2.fq.gz
 ```
 
 `kassemble` is designed for use as a CLI and stores the following output files in <output_dir> , which is set by the user:
@@ -93,4 +93,10 @@ kassemble --graph ../data/assembly_graph.fastg --paths ../data/contigs.paths --o
 
 ![alt tag](https://github.com/jasmina-dzurlic/Kassemble/blob/main/example/Graphbin2.png)
 Visualiation of assembly graph produced from Kassemby assembly of contigs and scaffolds. 
+
+
+#### Subtools for statistical analysis of k-mer frequency
+
+
+![alt tag](https://github.com/jasmina-dzurlic/Kassemble/blob/main/example/KAT_example.png)
 
