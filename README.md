@@ -82,7 +82,7 @@ kassemble simple_spades --name test --workdir /tmp --sample A ecoli_1K_1.fq.gz -
 ![alt tag](https://raw.githubusercontent.com/jasmina-dzurlic/Kassemble/main/example/SPAdes_ecoli_graph.png)
 
 
-#### Create refined assembly graph
+#### Create refined assembly graph (In-development)
 
 To create a refined assembly using multi-species contig coverage, `Kassemble` uses `GraphBin2` [tool](https://github.com/Vini2/GraphBin2) in which incorporates connectivity and coverage information from assembly graphs to adjust existing binning results on contigs and to infer contigs shared by multiple species. This type of multiple species coverage is ideal for GWAS and `Kmerkit` based analysis. 
 
@@ -95,8 +95,13 @@ kassemble assembly_graph --graph ../data/assembly_graph.fastg --paths ../data/co
 Visualiation of assembly graph produced from Kassemby assembly of contigs and scaffolds. 
 
 
-#### Subtools for statistical analysis of k-mer frequency
+#### Subtools for statistical analysis of k-mer frequency (In-development)
 
+
+```bash
+# create multi-species contig assembly graph
+kassemble kmer_statistics ...
+```
 
 ![alt tag](https://github.com/jasmina-dzurlic/Kassemble/blob/main/example/KAT_example.png)
 
