@@ -12,11 +12,7 @@ import toyplot
  """
     
 def graph_contigs(contigs.fasta)
- 
- """
- Graphs contigs assembled by simple_spades.py
- """
-    
+     
   data = (contigs.fasta)
 
     canvas, axes, mark = toyplot.plot(
