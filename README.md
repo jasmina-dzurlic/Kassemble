@@ -83,8 +83,12 @@ kassemble --name test --workdir /tmp --sample A ecoli_1K_1.fq.gz --sample B ecol
 
 ##### Create refined assembly graph
 
-To create a refined assembly, use the ___ module to create a graph. __ uses `GraphBin2` [tool](https://github.com/Vini2/GraphBin2) in which incorporates connectivity and coverage information from assembly graphs to adjust existing binning results on contigs and to infer contigs shared by multiple species.
-This type of multiple species coverage is ideal for GWAS and `Kmerkit based analysis`. 
+To create a refined assembly using multi-species contig coverage, `Kassemble` uses `GraphBin2` [tool](https://github.com/Vini2/GraphBin2) in which incorporates connectivity and coverage information from assembly graphs to adjust existing binning results on contigs and to infer contigs shared by multiple species. This type of multiple species coverage is ideal for GWAS and `Kmerkit` based analysis. 
+
+```bash
+# create multi-species contig assembly graph
+kassemble --graph ../data/assembly_graph.fastg --paths ../data/contigs.paths --outdir ../tmp --assemble spades
+```
 
 ![alt tag](https://github.com/jasmina-dzurlic/Kassemble/blob/main/example/Graphbin2.png)
 Visualiation of assembly graph produced from Kassemby assembly of contigs and scaffolds. 
