@@ -50,14 +50,14 @@ kmerkit kcount --name test --workdir /tmp --sample A ecoli_1K_1.fq.gz --sample B
 
 ```bash
 # filter kmers to find those unique to B (not in A)
-kmerkit kfilter --name test --workdir /tmp --mincov A 0.0 B 1.0 --maxcov A 0.0 B 1.0
+kmerkit kfilter --name test --workdir /tmp --sample A ecoli_1K_1.fq.gz --sample B ecoli_1K_2.fq.gz --mincov A 0.0 B 1.0 --maxcov A 0.0 B 1.0
 ```
 
 ##### Extract k-mers
 
 ```
 # extract fastq reads that contain these kmers from sample B
-kmerkit kextract --name test --workdir /tmp --samples A ecoli_1K_1.fq.gz 
+kmerkit kextract --name test --workdir /tmp --sample A ecoli_1K_1.fq.gz --sample B ecoli_1K_2.fq.gz
 ```
 
 
@@ -65,7 +65,7 @@ kmerkit kextract --name test --workdir /tmp --samples A ecoli_1K_1.fq.gz
 
 ```bash
 # assemble kmers into contigs
-kassemble --name assembled --workdir /tmp-assembled/ --sample ecoli_1K_1.fq.gz 
+kassemble --name test --workdir /tmp --sample A ecoli_1K_1.fq.gz --sample B ecoli_1K_2.fq.gz
 ```
 
 `kassemble` is designed for use as a CLI and stores the following output files in <output_dir> , which is set by the user:
