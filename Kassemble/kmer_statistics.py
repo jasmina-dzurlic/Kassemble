@@ -9,46 +9,18 @@ Install:
 bioconda install kat
 
 optional arguments:
---hist 
+ 
+--spectra-hist
 --gcp
 --comp
 --sect
 --filter
 --denisty
---spectra-hist
 
 """
 
 import subprocess
 
-def call_kat_hist ( graph="assembly_graph.fastg", outdir="test", assembler="spades", paths="contigs.paths"):
-
-    """
-    Call kat command line tool to assemble fastq data files.
-    """
-
-    # spa must receive an assembly graph file
-    cmd = ["kat.py", "-graph", assembly_graph.fastg]
-
-    # add the output name
-    cmd += ["-output", outdir]
-    
-    # add the output name
-    cmd += ["-assembler", spades]
-    
-    # add the output name
-    cmd += ["-paths", contigs.paths outdir]
-
-    # print the command so I can see it
-    print(" ".join(cmd))
-
-    # call the command with subprocess. 
-    subprocess.run(
-        cmd,         # this is the command
-        check=True,  # this checks whether it finished successfully
-        stderr=subprocess.STDOUT,  # these last two args make it run quietly
-        stdout=subprocess.DEVNULL, # without printing tons of into to stdout
-    )
     
  def call_kat_spectra ( graph="assembly_graph.fastg", outdir="test", assembler="spades", paths="contigs.paths"):
 
