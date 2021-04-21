@@ -85,7 +85,7 @@ kassemble simple_spades --name test --workdir /tmp --sample A ecoli_1K_1.fq.gz -
 </p>
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/jasmina-dzurlic/Kassemble/main/example/SPAdes_ecoli_graph.png" width="500" height="500">
+<img src="https://raw.githubusercontent.com/jasmina-dzurlic/Kassemble/main/example/SPAdes_ecoli_graph.png" width="400" height="400">
 </p>
 
 
