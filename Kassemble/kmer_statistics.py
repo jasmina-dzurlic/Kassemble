@@ -5,12 +5,10 @@
 Producing assembly statisitcs with The K-mer Analysis Toolkit (KAT)
 (https://github.com/TGAC/KAT)
 
-Install:
-bioconda install kat
+Install:bioconda install kat
 
 optional arguments:
- 
---spectra-hist
+ --spectra-hist
 --gcp
 --comp
 --sect
