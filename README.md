@@ -100,7 +100,7 @@ Visualiation of assembly graph produced from Kassemby assembly of contigs and sc
 
 [Add explanation to what this section is about]
 
-![alt tag](https://github.com/jasmina-dzurlic/Kassemble/blob/main/example/KAT_example.png)
+
 
 ##### Comparisons of k-mers
 [Explain this section]
