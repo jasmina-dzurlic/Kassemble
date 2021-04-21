@@ -22,23 +22,19 @@ optional arguments:
 import subprocess
 
     
- def call_kat_spectra ( graph="assembly_graph.fastg", outdir="test", assembler="spades", paths="contigs.paths"):
+ def call_kat_spectra ( hist_file="contig.fastq", outdir="test")
 
     """
-    Call kat command line tool to assemble fastq data files.
+    Call kat command line tool to create spectra histogram.
     """
 
-    # spa must receive an assembly graph file
-    cmd1 = ["kat.py", "-graph", assembly_graph.fastg]
+    # receive an acontig file with k-mers file
+    cmd1 = ["kat.py", "hist_file", contig.fastq]
 
     # add the output name
     cmd1 += ["-output", outdir]
     
     # add the output name
-    cmd1 += ["-assembler", spades]
-    
-    # add the output name
-    cmd1 += ["-paths", contigs.paths outdir]
 
     # print the command so I can see it
     print(" ".join(cmd1))
@@ -51,24 +47,18 @@ import subprocess
         stdout=subprocess.DEVNULL, # without printing tons of into to stdout
     )
 
- def call_kat_spectra ( graph="assembly_graph.fastg", outdir="test", assembler="spades", paths="contigs.paths"):
+ def call_kat_denisty ( matrix_file="matrix.", outdir="test":
 
     """
-    Call kat command line tool to assemble fastq data files.
+    Call kat command line tool to creat denisty graph of k-mers.
     """
 
-    # spa must receive an assembly graph file
-    cmd2 = ["kat.py", "-graph", assembly_graph.fastg]
+    # recieve matrix fie
+    cmd2 = ["kat.py", "-matrix_file", martix.]
 
     # add the output name
     cmd2 += ["-output", outdir]
     
-    # add the output name
-    cmd2 += ["-assembler", spades]
-    
-    # add the output name
-    cmd2 += ["-paths", contigs.paths outdir]
-
     # print the command so I can see it
     print(" ".join(cmd2))
 
@@ -81,23 +71,17 @@ import subprocess
     )
 
 
- def call_kat_density ( graph="assembly_graph.fastg", outdir="test", assembler="spades", paths="contigs.paths"):
+ def call_kat_profile ( profile="contigs.fastq", outdir="test"):
 
     """
-    Call kat command line tool to assemble fastq data files.
+    Call kat command line tool to graph of GC content in k-mers/reads
     """
 
     # spa must receive an assembly graph file
-    cmd3 = ["kat.py", "-graph", assembly_graph.fastg]
+    cmd3 = ["kat.py", "-profile", contigs.fastq]
 
     # add the output name
     cmd3 += ["-output", outdir]
-    
-    # add the output name
-    cmd3 += ["-assembler", spades]
-    
-    # add the output name
-    cmd3 += ["-paths", contigs.paths outdir]
 
     # print the command so I can see it
     print(" ".join(cmd3))
@@ -110,23 +94,18 @@ import subprocess
         stdout=subprocess.DEVNULL, # without printing tons of into to stdout
     )
 
- def call_kat_profile ( graph="assembly_graph.fastg", outdir="test", assembler="spades", paths="contigs.paths"):
+                       
+ def call_kat_comparison ( contigs_file="contigs.fastg", outdir="test""):
 
     """
-    Call kat command line tool to assemble fastq data files.
+    Call kat command line tool to graph of the copy number spectra of WGS data compared against an assembly
     """
 
     # spa must receive an assembly graph file
-    cmd4 = ["kat.py", "-graph", assembly_graph.fastg]
+    cmd4 = ["kat.py", "-contigs", contigs.fastg]
 
     # add the output name
     cmd4 += ["-output", outdir]
-    
-    # add the output name
-    cmd4 += ["-assembler", spades]
-    
-    # add the output name
-    cmd4 += ["-paths", contigs.paths outdir]
 
     # print the command so I can see it
     print(" ".join(cmd4))
@@ -140,23 +119,17 @@ import subprocess
     )
  
     
-  def call_kat_comparison ( graph="assembly_graph.fastg", outdir="test", assembler="spades", paths="contigs.paths"):
+  def call_kat_dataset (contigs="contigs.fastg", outdir="test"):
 
     """
-    Call kat command line tool to assemble fastq data files.
+    Call kat command line tool to create graph of datasets
     """
 
     # spa must receive an assembly graph file
-    cmd5 = ["kat.py", "-graph", assembly_graph.fastg]
+    cmd5 = ["kat.py", "-contigs", contigs.fastg]
 
     # add the output name
     cmd5 += ["-output", outdir]
-    
-    # add the output name
-    cmd5 += ["-assembler", spades]
-    
-    # add the output name
-    cmd5 += ["-paths", contigs.paths outdir]
 
     # print the command so I can see it
     print(" ".join(cmd5))
@@ -169,50 +142,19 @@ import subprocess
         stdout=subprocess.DEVNULL, # without printing tons of into to stdout
     )
  
-
-  def call_kat_matrix ( graph="assembly_graph.fastg", outdir="test", assembler="spades", paths="contigs.paths"):
-
-    """
-    Call kat command line tool to assemble fastq data files.
-    """
-
-    # spa must receive an assembly graph file
-    cmd6 = ["kat.py", "-graph", assembly_graph.fastg]
-
-    # add the output name
-    cmd6 += ["-output", outdir]
-    
-    # add the output name
-    cmd6 += ["-assembler", spades]
-    
-    # add the output name
-    cmd6 += ["-paths", contigs.paths outdir]
-
-    # print the command so I can see it
-    print(" ".join(cmd5))
-
-  # call the command with subprocess. 
-    subprocess.run(
-        cmd6,         # this is the command
-        check=True,  # this checks whether it finished successfully
-        stderr=subprocess.STDOUT,  # these last two args make it run quietly
-        stdout=subprocess.DEVNULL, # without printing tons of into to stdout
-    )
-
-
+                          
     
 
     if __name__ == "__main__":
 
     # test data set
-    GRAPH = "../data/assembly_graph.fastg"
+    CONTIGS = "../data/assembly_graph.fastg"
     OUTDIR = "../tmp"
-    ASSEMBLER = "spades"
-    PATHS = "../data/contigs.paths"
-       
+    MATRIX = "spades"
+   
 
     # test function, if it does not raise an error then it works
-    call_kat(GRAPH, ASSEMBLER, PATHS, OUTDIR)
+    call_kat(CONTIGS, OUTDIR, MATRIX)
 
     # print contents of OUTDIR to show results
     import os
