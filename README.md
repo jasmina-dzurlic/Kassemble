@@ -84,7 +84,7 @@ kassemble simple_spades --name test --workdir /tmp --sample A ecoli_1K_1.fq.gz -
 <output_dir>/contigs.fastq contains resulting contigs <br />
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/jasmina-dzurlic/Kassemble/main/example/FASTQ.png" width="400" height="200">
+<img src="https://raw.githubusercontent.com/jasmina-dzurlic/Kassemble/main/example/FASTQ.png" width="400" height="150">
 </p>
 
 <p align="center">
