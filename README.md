@@ -102,54 +102,56 @@ Visualiation of assembly graph produced from Kassemby assembly of contigs and sc
 `Kassemble` has subtools to create visualizations of k-mers assemblies. These subtools call on the [program] (https://github.com/TGAC/KAT) `KAT` to create graphs to visualize  k-mer / reads in contig assemblies such as comparisons of k-mer coverage, frequency, density, GC content, copy varitation across sequence reads, and shared exclusive content between two datasets. 
 
 
-
-##### Comparisons of k-mers
-[Explain this section]
+##### Spectrum of k-mers
+Visualises the K-mer spectra from contig assembly. This tool is designed to plot line graphs of one or more histograms to compare total K-mer counts between samples.
 
 ```bash
-# create graph to compare k-mer
+# create a histogram of k-mer spectra in a contig assembly
 kassemble kmer_statistics --
 ```
+![alt tag](https://github.com/jasmina-dzurlic/Kassemble/blob/main/example/K-mer_spectra.PNG)
 
-![alt tag](https://github.com/jasmina-dzurlic/Kassemble/blob/main/example/K-mer%20comparison.PNG)
 
-##### Density of k-mers
-[Explain this section]
+##### Comparisons of k-mers
+Graph of k-mer duplication levels that correspond to copy number variation within an assembly by comparing K-mers found in sequenced reads, to K-mers found in an assembly of those reads. 
 
 ```bash
-# create graph to compare k-mer
+# compare copy variation in sequences
+kassemble kmer_statistics --
+```
+![alt tag](https://github.com/jasmina-dzurlic/Kassemble/blob/main/example/K-mer%20comparison.PNG)
+
+
+##### Profile k-mers
+Creates a graph that illustrates coverage level of mapped k-mer reads across a sequence whith an option to isolate those of GC level content distribution. 
+
+```bash
+# create a histogram of coverage level of mapped k-mer reads across a sequence
+kassemble kmer_statistics --
+```
+![alt tag](https://github.com/jasmina-dzurlic/Kassemble/blob/main/example/K-mer_profile.PNG)
+
+
+##### Density of k-mers
+Creates a scatter plot, where the density is illustrated as “heat." Each point represents the number of distinct K-mers at that point. GC isolation aviable for this subtool.
+
+```bash
+# create a denisty plot of k-mers
 kassemble kmer_statistics --
 ```
 ![alt tag](https://github.com/jasmina-dzurlic/Kassemble/blob/main/example/K-mer_density.PNG)
 
 
 ##### Compare datasets of k-mers
-[Explain this section]
+
+Compare shared and exclusive content between two datasets by creating a spetra mix graph to visualize k-mer spectra of columns and rows in a matrix.
 
 ```bash
-# create graph to compare k-mer
+# create histogram to compare k-mers
 kassemble kmer_statistics --
 ```
 ![alt tag](https://github.com/jasmina-dzurlic/Kassemble/blob/main/example/K-mer_matrix.PNG)
 
-
-##### Profile k-mers
-[Explain this section]
-
-```bash
-# create graph to compare k-mer
-kassemble kmer_statistics --
-```
-![alt tag](https://github.com/jasmina-dzurlic/Kassemble/blob/main/example/K-mer_profile.PNG)
-
-##### Spectrum of k-mers
-[Explain this section]
-
-```bash
-# create graph to compare k-mer
-kassemble kmer_statistics --
-```
-![alt tag](https://github.com/jasmina-dzurlic/Kassemble/blob/main/example/K-mer_spectra.PNG)
 
 
 
