@@ -80,12 +80,13 @@ kassemble simple_spades --name test --workdir /tmp --sample A ecoli_1K_1.fq.gz -
 
 <output_dir>/contigs.fastq contains resulting contigs <br />
 
-![alt tag](https://raw.githubusercontent.com/jasmina-dzurlic/Kassemble/main/example/FASTQ.png)
+<p align="center">
+<img src="https://raw.githubusercontent.com/jasmina-dzurlic/Kassemble/main/example/FASTQ.png" width="500" height="500">
+</p>
 
-<output_dir>/assembly_graph.gfa contains assembly graph of contigs
-
-![alt tag](https://raw.githubusercontent.com/jasmina-dzurlic/Kassemble/main/example/SPAdes_ecoli_graph.png)
-
+<p align="center">
+<img src="https://raw.githubusercontent.com/jasmina-dzurlic/Kassemble/main/example/SPAdes_ecoli_graph.png" width="500" height="500">
+</p>
 
 
 ## Create refined assembly graph (In-development)
