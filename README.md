@@ -46,7 +46,7 @@ conda install SPAdes SOAPdenovo2 GraphBin2 kat subprocess kmerkit -c conda-forge
 The input for this program is a `.fasta` file containing genome seqeunces.  
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/jasmina-dzurlic/Kassemble/main/example/contig.png" width="500" height="100">
+<img src="https://raw.githubusercontent.com/jasmina-dzurlic/Kassemble/main/example/contig.png" width="600" height="200">
 </p>
 
 
