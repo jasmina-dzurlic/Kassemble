@@ -102,7 +102,7 @@ To create a refined assembly using multi-species contig coverage, `Kassemble` us
 kassemble assembly_graph --graph ../data/assembly_graph.fastg --paths ../data/contigs.paths --outdir ../tmp --assemble spades
 ```
 
-Visualiation of a multispecies assembly graph produced from `Kassemble` and `GraphBin2` of contigs and scaffolds. Each point is a species and each cloud representes a populatio of species in a sample compared to other samples. 
+Visualiation of a multispecies assembly graph produced from `Kassemble` and `GraphBin2` of contigs and scaffolds. Each point is a species and each cloud representes a population of species in a sample compared to other samples. 
 
 
 <p align="center">
