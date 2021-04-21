@@ -46,7 +46,7 @@ conda install SPAdes SOAPdenovo2 GraphBin2 kat subprocess kmerkit -c conda-forge
 The input for this program is a `.fasta` file containing genome seqeunces.  
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/jasmina-dzurlic/Kassemble/main/example/contig.png" width="500" height="200">
+<img src="https://raw.githubusercontent.com/jasmina-dzurlic/Kassemble/main/example/contig.png" width="400" height="200">
 </p>
 
 
@@ -102,7 +102,7 @@ kassemble assembly_graph --graph ../data/assembly_graph.fastg --paths ../data/co
 ```
 
 <p align="center">
-<img src="https://github.com/jasmina-dzurlic/Kassemble/blob/main/example/Graphbin2.png" width="400" height="400">
+<img src="https://github.com/jasmina-dzurlic/Kassemble/blob/main/example/Graphbin2.png" width="500" height="500">
 </p>
 Visualiation of assembly graph produced from Kassemby assembly of contigs and scaffolds. 
 
@@ -121,7 +121,7 @@ kassemble kmer_statistics --kat_spectra --contig_.fastq --outdir ../tmp
 ```
 
 <p align="center">
-<img src="https://github.com/jasmina-dzurlic/Kassemble/blob/main/example/K-mer_spectra.PNG" width="400" height="400">
+<img src="https://github.com/jasmina-dzurlic/Kassemble/blob/main/example/K-mer_spectra.PNG" width="300" height="400">
 </p>
 
 
@@ -134,7 +134,7 @@ kassemble kmer_statistics --kat_comparison --contig.fastq --outdir ../tmp
 ```
 
 <p align="center">
-<img src="https://github.com/jasmina-dzurlic/Kassemble/blob/main/example/K-mer%20comparison.PNG" width="400" height="400">
+<img src="https://github.com/jasmina-dzurlic/Kassemble/blob/main/example/K-mer%20comparison.PNG" width="300" height="400">
 </p>
 
 
@@ -146,7 +146,7 @@ Creates a graph that illustrates coverage level of mapped k-mer reads across a s
 kassemble kmer_statistics --kat_profile --contig.fastq --outdir ../tmp
 ```
 <p align="center">
-<img src="https://github.com/jasmina-dzurlic/Kassemble/blob/main/example/K-mer_profile.PNG" width="400" height="400">
+<img src="https://github.com/jasmina-dzurlic/Kassemble/blob/main/example/K-mer_profile.PNG" width="300" height="400">
 </p>
 
 
@@ -159,7 +159,7 @@ kassemble kmer_statistics --kat_density --contig.fastq --outdir ../tmp
 ```
 
 <p align="center">
-<img src="https://github.com/jasmina-dzurlic/Kassemble/blob/main/example/K-mer_density.PNG" width="400" height="400">
+<img src="https://github.com/jasmina-dzurlic/Kassemble/blob/main/example/K-mer_density.PNG" width="300" height="400">
 </p>
 
 
@@ -172,7 +172,7 @@ Compare shared and exclusive content between two datasets by creating a spetra m
 kassemble kmer_statistics --kat_dataset --contig.fastq --outdir ../tmp
 ```
 <p align="center">
-<img src="https://github.com/jasmina-dzurlic/Kassemble/blob/main/example/K-mer_matrix.PNG" width="400" height="400">
+<img src="https://github.com/jasmina-dzurlic/Kassemble/blob/main/example/K-mer_matrix.PNG" width="300" height="400">
 </p>
 
 
