@@ -121,7 +121,7 @@ kassemble kmer_statistics --kat_spectra --contig_.fastq --outdir ../tmp
 ```
 
 <p align="center">
-<img src="https://github.com/jasmina-dzurlic/Kassemble/blob/main/example/K-mer_spectra.PNG" width="500" height="500">
+<img src="https://github.com/jasmina-dzurlic/Kassemble/blob/main/example/K-mer_spectra.PNG" width="500" height="450">
 </p>
 
 
