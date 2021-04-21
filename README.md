@@ -96,9 +96,9 @@ kassemble assembly_graph --graph ../data/assembly_graph.fastg --paths ../data/co
 Visualiation of assembly graph produced from Kassemby assembly of contigs and scaffolds. 
 
 
-#### Subtools for statistical analysis of k-mer frequency (In-development)
+#### Subtools for visualizing k-mer assemblies (In-development)
 
-[Add explanation to what this section is about]
+`Kassemble` has subtools to create visualizations of k-mers assemblies. These subtools call on the program (https://github.com/TGAC/KAT) `KAT` to create graphs to visualize  k-mer / reads in contig assemblies such as comparisons of k-mer coverage, frequency, density, GC content, copy varitation across sequence reads, 
 
 
 
