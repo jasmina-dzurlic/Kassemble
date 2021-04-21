@@ -98,11 +98,57 @@ Visualiation of assembly graph produced from Kassemby assembly of contigs and sc
 
 #### Subtools for statistical analysis of k-mer frequency (In-development)
 
-
-```bash
-# create multi-species contig assembly graph
-kassemble kmer_statistics ...
-```
+[Add explanation to what this section is about]
 
 ![alt tag](https://github.com/jasmina-dzurlic/Kassemble/blob/main/example/KAT_example.png)
+
+##### Comparisons of k-mers
+[Explain this section]
+
+```bash
+# create graph to compare k-mer
+kassemble kmer_statistics --
+```
+
+![alt tag](https://github.com/jasmina-dzurlic/Kassemble/blob/main/example/K-mer%20comparison.PNG)
+
+##### Density of k-mers
+[Explain this section]
+
+```bash
+# create graph to compare k-mer
+kassemble kmer_statistics --
+```
+![alt tag](https://github.com/jasmina-dzurlic/Kassemble/blob/main/example/K-mer_density.PNG)
+
+
+##### Compare datasets of k-mers
+[Explain this section]
+
+```bash
+# create graph to compare k-mer
+kassemble kmer_statistics --
+```
+![alt tag](https://github.com/jasmina-dzurlic/Kassemble/blob/main/example/K-mer_matrix.PNG)
+
+
+##### Profile k-mers
+[Explain this section]
+
+```bash
+# create graph to compare k-mer
+kassemble kmer_statistics --
+```
+![alt tag](https://github.com/jasmina-dzurlic/Kassemble/blob/main/example/K-mer_profile.PNG)
+
+##### Spectrum of k-mers
+[Explain this section]
+
+```bash
+# create graph to compare k-mer
+kassemble kmer_statistics --
+```
+![alt tag](https://github.com/jasmina-dzurlic/Kassemble/blob/main/example/K-mer_spectra.PNG)
+
+
 
