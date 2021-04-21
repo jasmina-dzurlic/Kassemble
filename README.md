@@ -81,7 +81,7 @@ kassemble simple_spades --name test --workdir /tmp --sample A ecoli_1K_1.fq.gz -
 
 `kassemble` is designed for use as a CLI and stores the following output files in <output_dir> , which is set by the user:
 
-<output_dir>/contigs.fastq contains resulting contigs <br />
+<output_dir>/contigs.fastq contains resulting contigs and <output_dir>/assembly.fastq contains the assembly graph. <br />
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/jasmina-dzurlic/Kassemble/main/example/FASTQ.png" width="400" height="150">
@@ -90,6 +90,7 @@ kassemble simple_spades --name test --workdir /tmp --sample A ecoli_1K_1.fq.gz -
 <p align="center">
 <img src="https://raw.githubusercontent.com/jasmina-dzurlic/Kassemble/main/example/SPAdes_ecoli_graph.png" width="400" height="400">
 </p>
+
 
 
 ## Create refined assembly graph (In-development)
@@ -101,10 +102,12 @@ To create a refined assembly using multi-species contig coverage, `Kassemble` us
 kassemble assembly_graph --graph ../data/assembly_graph.fastg --paths ../data/contigs.paths --outdir ../tmp --assemble spades
 ```
 
+Visualiation of assembly graph produced from `Kassemble` and `GraphBin2` of contigs and scaffolds.
+
 <p align="center">
 <img src="https://github.com/jasmina-dzurlic/Kassemble/blob/main/example/Graphbin2.png" width="600" height="500">
 </p>
-Visualiation of assembly graph produced from Kassemby assembly of contigs and scaffolds. 
+ 
 
 
 ## Subtools for visualizing k-mer assemblies (In-development)
