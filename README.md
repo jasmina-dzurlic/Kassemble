@@ -99,7 +99,7 @@ Visualiation of assembly graph produced from Kassemby assembly of contigs and sc
 
 ## Subtools for visualizing k-mer assemblies (In-development)
 
-`Kassemble` has subtools to create visualizations of k-mers assemblies. These subtools call on the program (https://github.com/TGAC/KAT) `KAT` to create graphs to visualize  k-mer / reads in contig assemblies such as comparisons of k-mer coverage, frequency, density, GC content, copy varitation across sequence reads, 
+`Kassemble` has subtools to create visualizations of k-mers assemblies. These subtools call on the [program] (https://github.com/TGAC/KAT) `KAT` to create graphs to visualize  k-mer / reads in contig assemblies such as comparisons of k-mer coverage, frequency, density, GC content, copy varitation across sequence reads, and shared exclusive content between two datasets. 
 
 
 
